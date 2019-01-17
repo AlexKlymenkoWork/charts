@@ -1,1 +1,1 @@
-##Created with Highcharts technology by Oleksii Klymenko
+## Created with Highcharts technology by Oleksii Klymenko
