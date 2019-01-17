@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background: #3F51B5;
+}
+
+p,
+a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container {
+    position: relative;
+}
+
+.middle {
+    height: 700px;
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-areas:
+        'left right-top right-top'
+        'left right-bottom right-bottom';
+
+
+}
+
+.grid-container>div {
+    display: flex;
+    background: #fff;
+    padding: 1.5em;
+    text-align: justify;
+}
+
+.left {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-top {
+    grid-area: right-top;
+}
+
+.right-bottom {
+    grid-area: right-bottom;
+}
+
+@media only screen and (max-width: 1030px) {
+    .grid-container {
+        grid-template-areas:
+            'left'
+            'right-top'
+            'right-bottom';
+    }
+
+    .middle {
+        height: 700px;
+        width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .grid-container {
+        grid-template-areas:
+            'left'
+            'right-top'
+            'right-bottom';
+    }
+
+    .middle {
+        height: 700px;
+        width: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
